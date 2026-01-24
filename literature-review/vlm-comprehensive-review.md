@@ -1,5 +1,10 @@
 # Vision Language Models: A Comprehensive Literature Review
 
+**Author:** Xinsong Li (lixinso@gmail.com)
+**Date:** January 2026
+
+---
+
 ## Abstract
 
 Vision Language Models (VLMs) represent a significant advancement in artificial intelligence, enabling systems to understand and reason about both visual and textual information. This literature review surveys the evolution of VLM architectures, training methodologies, evaluation benchmarks, and real-world applications. We analyze key developments from foundational models like CLIP to state-of-the-art systems including GPT-4V, Gemini, and open-source leaders such as InternVL3 and Qwen2.5-VL. The review identifies current challenges including spatial reasoning, hallucination, and efficiency, while highlighting emerging trends in small VLMs, inference-time scaling, and agentic applications.
