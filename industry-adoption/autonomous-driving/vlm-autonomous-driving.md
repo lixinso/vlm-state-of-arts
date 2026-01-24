@@ -1,8 +1,5 @@
 # VLM Adoption in Self-Driving Car Industry
 
-**Author:** Xinsong Li (lixinso@gmail.com)
-**Date:** January 2026
-
 ---
 
 ## Abstract
