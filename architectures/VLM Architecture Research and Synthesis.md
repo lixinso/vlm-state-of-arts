@@ -265,6 +265,22 @@ A bifurcation is occurring in deployment strategies:
 * **Cloud (The "God" Models):** Models like Gemini 3.0 and Llama 4 Behemoth, with massive expert counts and context windows, reside in data centers. They handle complex, low-frequency tasks (e.g., "Analyze this 2-hour movie and write a screenplay based on it").  
 * **Edge (The "Fast" Models):** Models like **DeepSeek-VL2-Small** (2.8B) and **Llama 4 Scout** (quantized) are designed for local deployment. Innovations like **MLA** (DeepSeek) and **iRoPE** (Llama) allow these models to run on high-end consumer GPUs (RTX 5090\) or even mobile chips (Apple M5), enabling privacy-preserving, offline multimodal intelligence.29
 
+### **9.3. Embodied VLA Deployment**
+
+Robotics and autonomous driving add a stricter deployment regime than ordinary visual question answering. A Vision-Language-Action (VLA) model must connect semantic reasoning to physical control while respecting hard latency, safety, and geometry constraints.
+
+The emerging pattern is hierarchical rather than purely end-to-end:
+
+| Layer | Role | Typical Frequency |
+| :---- | :---- | :---- |
+| **System 2 VLM planner** | Semantic reasoning, instruction interpretation, long-horizon task sequencing | 1-10 Hz |
+| **System 1 visuomotor policy** | Converts goals into whole-body or manipulator actions | 50-200 Hz |
+| **System 0 controller** | Balance, torque control, collision limits, emergency safety | 500-1000 Hz |
+
+This architecture lets the VLM reason slowly while deterministic or learned controllers maintain physical stability. It also explains why robotics deployment often combines VLMs with spatial action heads, tactile feedback, ROS 2 middleware, and independent safety monitors rather than asking a single language model to directly drive actuators.
+
+See [VLM and VLA Adoption in Robotics and Embodied AI](../industry-adoption/robotics/vlm-robotics.md) for a dedicated robotics deployment analysis.
+
 ## ---
 
 **10\. Conclusion and Future Outlook**

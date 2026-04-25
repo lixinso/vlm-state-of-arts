@@ -196,7 +196,9 @@ Smaller VLMs (1-10B parameters) running on edge devices enable:
 
 ### 4.1 Overview
 
-Robotics represents the frontier of VLM applications through Vision-Language-Action (VLA) models that unify perception, reasoning, and physical control.
+Robotics represents the frontier of VLM adoption through Vision-Language-Action (VLA) models that unify perception, reasoning, and physical control. Unlike image captioning or document analysis, robotics requires models to produce safe physical actions under strict latency, hardware, and reliability constraints.
+
+For a detailed robotics-focused analysis, see [VLM and VLA Adoption in Robotics and Embodied AI](./robotics/vlm-robotics.md).
 
 ### 4.2 VLA Architecture
 
@@ -229,7 +231,7 @@ Robotics represents the frontier of VLM applications through Vision-Language-Act
 | **Food Service** | Grocery bagging, table bussing | 60-75% |
 | **Assembly** | Box assembly, component placement | 70-85% |
 
-### 4.4 Leading Models
+### 4.4 Leading Models and Frameworks
 
 #### Physical Intelligence π0 / π0-FAST
 - First robotics foundation models
@@ -247,6 +249,12 @@ Robotics represents the frontier of VLM applications through Vision-Language-Act
 - Research-friendly
 - Fine-tuning capable
 
+#### Emerging VLA Architecture Patterns
+- Hierarchical System 0/1/2 control for slow reasoning and fast reflexes
+- Spatial grounding with depth, pose, and 3D action heads
+- Tactile and force feedback for contact-rich manipulation
+- Middleware bridges between foundation models and ROS 2 controllers
+
 ### 4.5 Training Approach
 
 | Aspect | Traditional Robotics | VLA Models |
@@ -262,6 +270,8 @@ Robotics represents the frontier of VLM applications through Vision-Language-Act
 - **Safety concerns** in human-robot collaboration
 - **Sim-to-real gap** for training efficiency
 - **Hardware costs** for capable robot platforms
+- **Latency constraints**: VLM reasoning is far slower than low-level control loops
+- **Physical grounding**: 2D visual models still struggle with 3D geometry and force interaction
 
 ### 4.7 Future: General-Purpose Robots
 
@@ -270,6 +280,8 @@ VLA models are enabling the vision of general-purpose robots that can:
 - Adapt to novel objects and environments
 - Learn from demonstration
 - Collaborate safely with humans
+
+Near-term systems are likely to remain hybrid: VLMs handle semantic reasoning and task decomposition, while specialized controllers enforce stability, safety, and real-time actuation.
 
 ---
 

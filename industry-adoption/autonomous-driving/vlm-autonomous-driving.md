@@ -309,6 +309,22 @@ VLM provides high-level reasoning while specialized module handles control.
 - Li Auto: Cloud reconfiguration + generative world model validation
 - XPeng: Extensive simulation with 72B cloud model
 
+### 4.4 Relationship to Robotics VLA Research
+
+Autonomous driving is a specialized branch of embodied AI: the action space is narrower than humanoid manipulation, but the safety bar, validation burden, and real-time constraints are much higher. Recent driving VLA research increasingly mirrors broader robotics trends:
+
+| Robotics VLA Pattern | Autonomous Driving Equivalent |
+|----------------------|-------------------------------|
+| VLM planner + action head | VLM behavior planner + trajectory decoder |
+| Spatial grounding | Occupancy, map, lane, and agent-state grounding |
+| Progress awareness | Route progress, maneuver completion, scenario state tracking |
+| World models | Forecasting of agents, road geometry, and long-tail events |
+| Safety monitor | Rule, reachability, and collision-checking layers |
+
+Frameworks such as DriveVLM-RL and WorldVLM reflect this convergence. They use VLMs for interpretable, context-aware behavior reasoning while relying on world models or trajectory modules for precise forecasting and control. This hybrid architecture is likely to dominate near-term deployment because it preserves the semantic strengths of VLMs without asking a language model to directly manage millisecond-level vehicle control.
+
+For the broader robotics context, see [VLM and VLA Adoption in Robotics and Embodied AI](../robotics/vlm-robotics.md).
+
 ---
 
 ## 5. Benchmarks and Evaluation

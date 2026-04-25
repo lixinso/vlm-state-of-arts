@@ -14,6 +14,7 @@ vlm-state-of-arts/
 ├── models/                # Detailed documentation of VLM architectures
 ├── benchmarks/            # Benchmark descriptions and comparisons
 ├── papers/                # Key research papers and summaries
+├── industry-adoption/     # Industry use cases and deployment analysis
 └── resources/             # Additional resources, tutorials, and tools
 ```
 
@@ -23,6 +24,7 @@ vlm-state-of-arts/
 - [Key Benchmarks](#key-benchmarks)
 - [Architecture Overview](#architecture-overview)
 - [Current Trends](#current-trends)
+- [Industry Adoption](#industry-adoption)
 
 ## Top Models (2025-2026)
 
@@ -89,6 +91,16 @@ Image → [Vision Encoder] → [Projection] → [LLM] → Text Response
 - Hallucination resistance
 - Complex mathematical reasoning from images
 
+## Industry Adoption
+
+VLMs are moving from research benchmarks into applied industry workflows. Key adoption areas include:
+
+| Area | Focus |
+|------|-------|
+| [Cross-industry overview](./industry-adoption/vlm-industry-adoption-overview.md) | Healthcare, retail, robotics, documents, surveillance, manufacturing, accessibility |
+| [Autonomous driving](./industry-adoption/autonomous-driving/vlm-autonomous-driving.md) | VLA adoption across robotaxi and EV manufacturers |
+| [Robotics and embodied AI](./industry-adoption/robotics/vlm-robotics.md) | VLA architectures, robot control, safety, middleware, edge deployment |
+
 ## Getting Started
 
 See individual directories for detailed information:
@@ -96,6 +108,7 @@ See individual directories for detailed information:
 - [`models/`](./models/) - Detailed architecture documentation
 - [`benchmarks/`](./benchmarks/) - Benchmark comparisons and analysis
 - [`papers/`](./papers/) - Key research papers
+- [`industry-adoption/`](./industry-adoption/) - Industry adoption studies and deployment analysis
 - [`resources/`](./resources/) - Tools and tutorials
 
 ## Contributing
